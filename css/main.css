@@ -120,6 +120,7 @@ html {
     min-width: 100vw;
     min-height: 100vh;
     height: 100vh;
+    scroll-behavior: smooth;
     font-size: 100%;
 }
 
@@ -141,9 +142,7 @@ body {
     flex-direction: column;
     padding-top: 60px;
     font-family: var(--ff-font-body);
-
 }
-
 
 ul {
     list-style: none;
@@ -152,7 +151,6 @@ ul {
 a {
     text-decoration: none;
 }
-
 
 /*=============================================
          header
@@ -172,8 +170,6 @@ a {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-
-
 }
 
 .logo {
@@ -182,7 +178,6 @@ a {
     font-weight: bold;
     letter-spacing: -0.5px;
     color: rgba(255, 255, 255, 0.75);
-
 }
 
 .logo-brand {
@@ -217,7 +212,6 @@ a {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: rgba(255, 255, 255, 0.75);
-
 }
 
 
@@ -259,34 +253,36 @@ a {
 
 .section {
     width: 100%;
-    height: 100vh;
+
 }
 
 .section1 {
     background-color: var(--clr-primary-800);
+    height: 100vh;
 }
 
 .section2 {
-    background-color: var(--clr-secondary-800);
+    background-color: var(--clr-augmented-400);
+    height: 100vh;
 }
 
 .section3 {
-    background-color: var(--clr-tertiary-800);
+    background-color: var(--clr-primary-600);
+    height: 100vh;
 }
 
 .section4 {
-    background-color: var(--clr-accent-800);
+    background-color: var(--clr-augmented-500);
+    height: 100vh;
 }
 
 .section5 {
-    background-color: var(--clr-augmented-500);
+    background-color: var(--clr-augmented-300);
+    height: 90vh;
 }
 
 .footer {
     margin-top: auto;
-
-    /*    background-color: rgb(19, 22, 28); */
-
 }
 
 .footer .copyright {
@@ -331,6 +327,9 @@ a {
     }
 }
 
+/*=============================================
+          media queries
+================================================*/
 
 @media only screen and (max-width: 768px) {
 
