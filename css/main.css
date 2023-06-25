@@ -165,10 +165,16 @@ a {
 }
 
 .header__navbar {
+    /* min-width: 960px;
+    width: 90%;
+    max-width: 1300px; */
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
     padding: 16px 32px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -211,7 +217,41 @@ a {
     font-weight: var(--fw-font-weight-500);
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: rgba(255, 255, 255, 0.75);
+    color: var(--clr-augmented-100);
+}
+
+.navbar__list_link.active,
+.navbar__list_link:hover {
+    color: var(--clr-neutral-100);
+}
+
+a.underline-hover-effect {
+    text-decoration: none;
+}
+
+.underline-hover-effect {
+    display: inline-block;
+    padding-bottom: 0.5rem; /* defines the space between text and underline */
+    position: relative;
+}
+
+.underline-hover-effect::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--clr-augmented-100);
+    transition: width 0.25s ease-out;
+}
+
+.underline-hover-effect.active::before,
+.underline-hover-effect:hover::before {
+    width: 100%;
+    left: 0;
+    right: auto;
+
 }
 
 
@@ -253,6 +293,11 @@ a {
 
 .section {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
 }
 
@@ -279,6 +324,14 @@ a {
 .section5 {
     background-color: var(--clr-augmented-300);
     height: 90vh;
+}
+
+.section__text {
+    font-family: var(--ff-font-display);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--clr-neutral-200);
 }
 
 .footer {
@@ -331,10 +384,24 @@ a {
           media queries
 ================================================*/
 
+@media only screen and (max-width: 1100px) {
+    .header__navbar {
+        width: 90vw;
+    }
+}
+
 @media only screen and (max-width: 768px) {
 
     .header__navbar {
+        width: 98vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 16px 32px;
+        display: flex;
+        flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+
     }
 
     .navbar__nav {
