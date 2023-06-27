@@ -7,7 +7,9 @@ $(window).on('load', function () {
   $('#preloader-gif, #preloader').fadeOut(5000, function () {});
 });
 
-
+/*=============================================
+          js-simple-navbar scripts
+================================================*/
 $(function () {
   const navbar_navigation = document.querySelector('.navbar__nav');
   const hamburger = document.querySelector('.hamburger');
