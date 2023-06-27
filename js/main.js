@@ -1,4 +1,3 @@
-
 /* ============================================
             preloader
 ===============================================*/
@@ -17,7 +16,6 @@ $(function () {
   const sections = document.querySelectorAll('section');
   const listLinks = document.querySelectorAll('.navbar__list_link');
   
-  
   hamburger.addEventListener('click', () => {
     navbar_navigation.classList.toggle('navbar__nav--open');
     hamburger.classList.toggle('hamburger--open');
@@ -28,7 +26,7 @@ $(function () {
     hamburger.classList.remove('hamburger--open');
   });
   
-  window.onscroll = () => {
+  window.addEventListener('scroll', () => {
     sections.forEach(section => {
       let top = window.scrollY;
       let offset = section.offsetTop - 200;
@@ -42,5 +40,5 @@ $(function () {
         });
       }
     });
-  };
-})
+  });
+});
